@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monu Jaiswal - Professional SEO Executive & Digital Marketing Specialist with 3+ years of experience in On-Page SEO, Technical SEO, and Content Optimization.">
+    <meta name="keywords" content="SEO Executive, Digital Marketing, SEO Specialist, WordPress SEO, Google Analytics, Content Optimization">
+    <meta name="author" content="Monu Jaiswal">
+    <link rel="icon" type="image/png" href="/mnt/user-data/uploads/1770635350310_image.png">
+    <title>Monu Jaiswal - SEO Executive & Digital Marketer | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: #0a0a0a;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-image-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5), 0 0 60px rgba(102, 126, 234, 0.2);
+        }
+
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.05);
+            border-color: #764ba2;
+            box-shadow: 0 15px 50px rgba(118, 75, 162, 0.6), 0 0 80px rgba(118, 75, 162, 0.3);
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .location {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1.4s ease;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 1rem auto;
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #2d2d2d;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            transition: all 0.5s ease;
+        }
+
+        .skill-card:hover::before {
+            left: 0;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            border-color: #667eea;
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .skill-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .experience-item {
+            background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+            border: 1px solid #2d2d2d;
+            border-left: 5px solid #667eea;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            border-color: #764ba2;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .experience-item h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+
+        .experience-date {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .experience-item ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .outcomes {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .outcome-badge {
+            background: rgba(102, 126, 234, 0.2);
+            color: #8fa3ff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            border: 1px solid #2d2d2d;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            border-color: #667eea;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .project-image-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: rgba(102, 126, 234, 0.2);
+            color: #8fa3ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        #contact .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .contact-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #2d2d2d;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #0f0f0f;
+            padding: 3rem 0;
+            border-top: 1px solid #2d2d2d;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #b0b0b0;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-image-container">
+                <img src="/mnt/user-data/uploads/1770635381993_image.png" alt="Monu Jaiswal - SEO Executive" class="profile-image" id="profileImg">
+            </div>
+            <div class="hero-text">
+                <h1>Monu Jaiswal</h1>
+                <p class="tagline">SEO Executive & Digital Marketing Specialist</p>
+                <p class="location">📍 New Delhi, India</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Tools Mastered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="skill-card" style="max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; text-align: center;">
+                    I am a results-driven SEO Executive with <strong>3+ years of hands-on experience</strong> in building and executing SEO strategies that improve organic visibility, keyword rankings, and website engagement. I specialize in <strong>On-Page SEO, Technical SEO, Off-Page SEO, and Content Optimization</strong>, with practical exposure to WordPress websites, Google Analytics, Search Console, Meta Ads, and Google Ads. I have worked on both service-based and product-based websites, improving search performance through data-driven optimization.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: #0a0a0a;">
+        <div class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>SEO Expertise</h3>
+                    <ul>
+                        <li>On-Page SEO (Meta tags, headers, internal linking)</li>
+                        <li>Technical SEO (Indexing, site structure, Core Web Vitals)</li>
+                        <li>Off-Page SEO (White-hat link building)</li>
+                        <li>Keyword Research & Competitor Analysis</li>
+                        <li>SEO Content Optimization & Blogging</li>
+                        <li>Local SEO (Google Business Profile)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧰</div>
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Google Analytics (GA4)</li>
+                        <li>Google Search Console</li>
+                        <li>WordPress</li>
+                        <li>Ahrefs / Ubersuggest</li>
+                        <li>Meta Ads & Google Ads</li>
+                        <li>Canva & Adobe Photoshop</li>
+                        <li>AI tools for content optimization</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>SEO Strategy Development</li>
+                        <li>Data-Driven Optimization</li>
+                        <li>Content Marketing</li>
+                        <li>Website Performance Analysis</li>
+                        <li>Conversion Rate Optimization</li>
+                        <li>Digital Marketing Campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>SEO Executive – Shoeclinic</h3>
+                            <p style="color: #666; margin-top: 0.5rem;">📍 New Delhi</p>
+                        </div>
+                        <div class="experience-date">Nov 2024 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Created SEO-optimized content for blogs, landing pages, and service pages</li>
+                        <li>Improved organic traffic through structured keyword mapping</li>
+                        <li>Optimized title tags, meta descriptions, headers, image alt text</li>
+                        <li>Strengthened internal linking to improve crawlability</li>
+                        <li>Built high-quality backlinks from relevant domains</li>
+                        <li>Tracked performance using Google Analytics & Search Console</li>
+                    </ul>
+                    <div class="outcomes">
+                        <span class="outcome-badge">✔ Improved keyword rankings</span>
+                        <span class="outcome-badge">✔ Increased organic engagement</span>
+                        <span class="outcome-badge">✔ Enhanced domain authority</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>SEO Executive – Skylan Information</h3>
+                            <p style="color: #666; margin-top: 0.5rem;">📍 Noida</p>
+                        </div>
+                        <div class="experience-date">Aug 2022 – Nov 2024</div>
+                    </div>
+                    <ul>
+                        <li>Planned and executed full SEO strategies for multiple websites</li>
+                        <li>Conducted in-depth keyword research for blogs and landing pages</li>
+                        <li>Optimized service pages, blogs, and product descriptions</li>
+                        <li>Improved CTR using better meta copywriting</li>
+                        <li>Performed regular SEO audits & fixes</li>
+                    </ul>
+                    <div class="outcomes">
+                        <span class="outcome-badge">✔ Better SERP visibility</span>
+                        <span class="outcome-badge">✔ Consistent organic traffic growth</span>
+                        <span class="outcome-badge">✔ Improved user experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="background: #0a0a0a;">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <svg class="project-image" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="200" fill="url(#grad1)"/>
+                            <text x="200" y="90" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">SHOECLINIC</text>
+                            <text x="200" y="120" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Service Website SEO</text>
+                        </svg>
+                        <div class="project-overlay">View Details</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Service-Based Website SEO Optimization</h3>
+                        <p><strong>Industry:</strong> Shoeclinic.in</p>
+                        <p style="margin-top: 1rem;">Comprehensive SEO strategy for local service business including keyword research, on-page optimization, and content strategy.</p>
+                        <div class="project-tags">
+                            <span class="tag">Local SEO</span>
+                            <span class="tag">On-Page SEO</span>
+                            <span class="tag">Content Strategy</span>
+                        </div>
+                        <div class="outcomes" style="margin-top: 1rem;">
+                            <span class="outcome-badge">📈 Improved rankings</span>
+                            <span class="outcome-badge">📈 Increased inquiries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <svg class="project-image" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="200" fill="url(#grad2)"/>
+                            <text x="200" y="80" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">BRANDCRAFT</text>
+                            <text x="200" y="105" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">ACADEMY</text>
+                            <text x="200" y="130" font-family="Arial" font-size="16" fill="white" text-anchor="middle">WordPress Development</text>
+                        </svg>
+                        <div class="project-overlay">View Details</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>WordPress SEO Website Setup</h3>
+                        <p><strong>Platform:</strong> brandcraftacademy.com</p>
+                        <p style="margin-top: 1rem;">Built SEO-friendly WordPress website with optimized structure, meta implementation, and performance enhancements.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Technical SEO</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                        <div class="outcomes" style="margin-top: 1rem;">
+                            <span class="outcome-badge">🚀 Faster load time</span>
+                            <span class="outcome-badge">🚀 Better indexing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <svg class="project-image" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="200" fill="url(#grad3)"/>
+                            <text x="200" y="90" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">CONTENT SEO</text>
+                            <text x="200" y="120" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Blog Strategy & Optimization</text>
+                        </svg>
+                        <div class="project-overlay">View Details</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Content SEO & Blogging Strategy</h3>
+                        <p><strong>Focus:</strong> Long-tail keyword optimization</p>
+                        <p style="margin-top: 1rem;">Developed comprehensive content strategy with keyword clustering and SEO best practices for improved engagement.</p>
+                        <div class="project-tags">
+                            <span class="tag">Content Marketing</span>
+                            <span class="tag">Keyword Research</span>
+                            <span class="tag">SEO Writing</span>
+                        </div>
+                        <div class="outcomes" style="margin-top: 1rem;">
+                            <span class="outcome-badge">✍ Higher engagement</span>
+                            <span class="outcome-badge">✍ Better rankings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Can Do Section -->
+    <section style="background: #121212;">
+        <div class="container">
+            <h2>What I Can Do For You</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">📈</div>
+                    <h3>Growth & Traffic</h3>
+                    <ul>
+                        <li>Increase organic traffic</li>
+                        <li>Improve keyword rankings</li>
+                        <li>Build long-term SEO strategies</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Technical Excellence</h3>
+                    <ul>
+                        <li>Optimize website SEO end-to-end</li>
+                        <li>Fix technical SEO issues</li>
+                        <li>Improve site performance</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">✍️</div>
+                    <h3>Content & Ads</h3>
+                    <ul>
+                        <li>Create SEO-friendly content</li>
+                        <li>Manage Google Ads & Meta Ads</li>
+                        <li>Develop content strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 style="color: white;">Let's Work Together</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                If you're looking for an SEO professional who understands both strategy and execution, I'd love to collaborate.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="/cdn-cgi/l/email-protection#4d2022233827757e7d7e0d2a202c2421632e2220"><span class="__cf_email__" data-cfemail="610c0e0f140b5952515221060c00080d4f020e0c">[email&#160;protected]</span></a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+918130032030">+91 8130032030</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>New Delhi, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Monu Jaiswal - SEO Executive & Digital Marketer. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">Built with passion for digital excellence</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Load profile image
+        const profileImg = document.getElementById('profileImg');
+        const uploadedImage = '/mnt/user-data/uploads/Gemini_Generated_Image_1vp6if1vp6if1vp6.png';
+        
+        // Try to load the uploaded image
+        const img = new Image();
+        img.onload = function() {
+            profileImg.src = uploadedImage;
+        };
+        img.onerror = function() {
+            // Fallback to a placeholder if image fails to load
+            profileImg.src = 'data:image/svg+xml;base64,' + btoa(`
+                <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="125" cy="125" r="125" fill="url(#grad)"/>
+                    <text x="125" y="135" font-family="Arial" font-size="80" fill="white" text-anchor="middle" font-weight="bold">MJ</text>
+                </svg>
+            `);
+        };
+        img.src = uploadedImage;
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwar
